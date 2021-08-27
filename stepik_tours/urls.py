@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view),
     path('departures/<str:departure_id>', departure_view),
-    path('tours/<int:tour_id>', tour_view),
+    path('tour/<int:tour_id>', tour_view),
 ]
 
 

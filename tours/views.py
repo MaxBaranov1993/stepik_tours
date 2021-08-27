@@ -22,7 +22,7 @@ def departure_view(request, departure_id):
 
 
 def tour_view (request, tour_id):
-    tours = {
+    tour = {
         1: "Тур №1",
         2: "Тур №2",
         3: "Тур №3",
@@ -30,9 +30,9 @@ def tour_view (request, tour_id):
         5: "Тур №5",
     }
     try:
-        tour = tours[tour_id]
+        tours = tour[tour_id]
     except KeyError:
         raise Http404
     return render(request, "tours_template/tour.html", context={
-        'tour': tour,
+        'tours': tours,
     })
